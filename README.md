@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Projeto de Informações de Filmes de Animação
 
-## Getting Started
+Este projeto é uma aplicação web dedicada a fornecer informações sobre filmes de animação. Através de uma interface amigável, os usuários podem explorar uma variedade de animações, acessar perfis de usuários e muito mais.
 
-First, run the development server:
+## Estrutura do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **src/**: Contém todos os arquivos de código-fonte da aplicação.
+  - **components/**: Componentes reutilizáveis da aplicação.
+    - **Header.jsx**: Componente que renderiza o título e links principais.
+    - **Footer.jsx**: Componente que renderiza informações de rodapé.
+    - **MovieCard.jsx**: Componente para exibir informações sobre filmes de animação.
+  - **pages/**: Páginas principais da aplicação.
+    - **Home.jsx**: Página inicial com título e links.
+    - **Profile.jsx**: Página que exibe informações do usuário.
+    - **Movies.jsx**: Página que lista filmes de animação.
+  - **styles/**: Arquivos de estilo da aplicação.
+    - **global.css**: Estilos globais.
+    - **components.css**: Estilos específicos para componentes.
+  - **utils/**: Funções utilitárias.
+    - **api.js**: Funções para chamadas à API.
+  - **App.jsx**: Ponto de entrada da aplicação.
+  - **index.js**: Montagem da aplicação no DOM.
+- **public/**: Contém arquivos públicos.
+  - **index.html**: HTML principal da aplicação.
+- **package.json**: Configuração do npm.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Executar o Projeto
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Clone o repositório.
+2. Navegue até o diretório do projeto.
+3. Execute `npm install` para instalar as dependências.
+4. Execute `npm start` para iniciar a aplicação.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contribuição
 
-## Learn More
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
 
-To learn more about Next.js, take a look at the following resources:
+## Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto está licenciado sob a MIT License.
