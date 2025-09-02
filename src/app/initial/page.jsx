@@ -6,11 +6,11 @@ export default function HomePage() {
     const router = useRouter()
 
     const handleProfileRedirect = () => {
-        router.push('/perfil')
+        router.push('/home')
     }
 
     const handleMainRedirect = () => {
-        router.push('/principal')
+        router.push('/')
     }
 
     return (
@@ -32,7 +32,7 @@ export default function HomePage() {
                     >
                         <span className={styles.btnIcon}>👤</span>
                         <div className={styles.btnContent}>
-                            <span className={styles.btnTitle}> ➡️ Meu Perfil</span>
+                            <span className={styles.btnTitle}> ➡️ Sobre Mim</span>
                         </div>
                     </button>
 
@@ -42,7 +42,7 @@ export default function HomePage() {
                     >
                         <span className={styles.btnIcon}>🏠</span>
                         <div className={styles.btnContent}>
-                            <span className={styles.btnTitle}> ➡️ Página Principal</span>
+                            <span className={styles.btnTitle}> ➡️ Página Inicial</span>
                         </div>
                     </button>
                 </div>
