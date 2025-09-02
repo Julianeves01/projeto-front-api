@@ -25,7 +25,10 @@ export default function Home() {
                     <Image src="/linkedin.png" alt="Linkedin" className={styles.icon} width={32} height={32} />
                 </a>
             </div>
-            <Link href="/livros" className={styles.button}>Ver Filmes</Link>
+            <div className={styles.buttonContainer}>
+                <Link href="/" className={styles.button}>Página Inicial</Link>
+                <Link href="/apiinfo" className={styles.button}>Ver Catálogo</Link>
+            </div>
         </div>
     );
 }

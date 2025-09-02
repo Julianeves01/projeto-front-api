@@ -10,7 +10,7 @@ export default function HomePage() {
     }
 
     const handleMainRedirect = () => {
-        router.push('/')
+        router.push('/apiinfo')
     }
 
     return (

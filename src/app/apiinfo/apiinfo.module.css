@@ -1,0 +1,277 @@
+.container {
+    min-height: 100vh;
+    background: #fafafa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Header minimalista com animação sutil */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.mainTitle {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: white;
+    margin: 0 0 1rem 0;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.85);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Layout principal em grid moderno */
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Cards com design neumórfico */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 
+        20px 20px 60px #d1d1d1,
+        -20px -20px 60px #ffffff;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 
+        25px 25px 70px #c5c5c5,
+        -25px -25px 70px #ffffff;
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.cardText {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Botões minimalistas com gradiente sutil */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Seção de endpoints com design limpo */
+.endpointsSection {
+    margin: 4rem 0;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.sectionTitle::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: block;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.endpoint {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #667eea;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.endpoint:hover {
+    transform: translateX(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.methodBadge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: #48bb78;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.endpointPath {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.endpointDescription {
+    color: #4a5568;
+    margin-top: 0.5rem;
+}
+
+/* Navegação com estilo glassmorphism */
+.navigationSection {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.navigationButtons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navButton {
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #2d3748;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.navButton:hover {
+    background: rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+.navButtonPrimary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Footer minimalista */
+.footer {
+    background: #f7fafc;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footerText {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+/* Responsivo aprimorado */
+@media (max-width: 768px) {
+    .header {
+        padding: 3rem 1rem;
+    }
+    
+    .main {
+        padding: 2rem 1rem;
+    }
+    
+    .card {
+        padding: 2rem;
+    }
+    
+    .navigationButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .navButton {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Efeitos de loading e transições suaves */
+.card, .endpoint, .button, .navButton {
+    will-change: transform;
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.2s; }
+.card:nth-child(4) { animation-delay: 0.3s; }
